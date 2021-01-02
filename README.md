@@ -1,19 +1,10 @@
 # Chocolatey Packages
 
-~~~
-<!-- EDIT ME-->
+[![](https://ci.appveyor.com/api/projects/status/github/cconrad/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/cconrad/chocolatey-packages)
 
-[![](https://ci.appveyor.com/api/projects/status/github/YOUR_GITHUB_USERNAME_HERE/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/YOUR_GITHUB_USERNAME_HERE/chocolatey-packages)
-[Update status](https://gist.github.com/YOUR_GITHUB_USERNAME_HERE/YOUR_GIST_ID)
-
-<!-- REMOVE THE squiggles "~" surrounding this (this should not be a code block) -->
-~~~
-
-## Chocolatey Packages Template
+## Chocolatey Packages
 
 This contains Chocolatey packages, both manually and automatically maintained.
-
-You can choose to use one or both of the different methods currently supported in the Chocolatey community for automatic packaging. They are AU (Automatic Updater) and Ketarin/ChocolateyPackageUpdater.
 
 ### Folder Structure
 
