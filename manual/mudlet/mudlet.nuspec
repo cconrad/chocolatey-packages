@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>mudlet</id>
+    <version>4.10.1.20210103</version>
+    <packageSourceUrl>https://github.com/cconrad/chocolatey-packages/tree/master/manual/mudlet</packageSourceUrl>
+    <owners>claus</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Mudlet</title>
+    <authors>https://github.com/Mudlet/Mudlet/graphs/contributors</authors>
+    <projectUrl>https://www.mudlet.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/cconrad/chocolatey-packages/icons/mudlet.png</iconUrl>
+    <copyright>2020 Mudlet.org community</copyright>
+    <licenseUrl>https://github.com/Mudlet/Mudlet/blob/development/COPYING</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/Mudlet/Mudlet</projectSourceUrl>
+    <docsUrl>https://wiki.mudlet.org/w/Manual:Contents</docsUrl>
+    <mailingListUrl>https://forums.mudlet.org/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/Mudlet/Mudlet/issues</bugTrackerUrl>
+    <tags>mud client games</tags>
+    <summary>A modern MUD client with a graphical user inteface and built in Lua scripting</summary>
+    <description><![CDATA[## About
+
+Mudlet is a quality [MUD](https://en.wikipedia.org/wiki/MUD) client, designed to take mudding to a new level.
+
+It’s a modern breed of a client on the gaming scene – with an intuitive user interface, a specially designed scripting framework, and a very fast text display. That, along with cross-platform capability and an open-source development model result in a very likable game client.
+
+## Key Features
+
+* Simple to use
+* Very, very fast
+* Active development
+* Big, thriving community
+* Powerful trigger engine
+* Rich Lua-based coding functionality (API)
+* Excellent script editor
+* 2D and 3D mapper with autowalk
+* Powerful and simple to use GMCP
+* Discord integration
+* Completely themable
+* Open-source and Free
+* Cross platform: runs on Windows, macOS and Linux
+* Full compatibility: run same scripts on any of the above]]></description>
+    <releaseNotes><![CDATA[* [Changelog](https://github.com/Mudlet/Mudlet/releases)
+* [News](https://www.mudlet.org/news/)]]></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
