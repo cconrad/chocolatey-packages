@@ -26,7 +26,7 @@ environment:
 
   # Mail credentials - for error notifications
   mail_user:
-    secure: YOUR_EMAIL_ACCOUNT_HERE_ENCRYPTED_STRINGAIF4gU9KBnT8aK9WM3bjS6LvklVsxgJbzCdLzuAcm4A= #https://ci.appveyor.com/tools/encrypt
+    secure: AIF4gU9KBnT8aK9WM3bjS6LvklVsxgJbzCdLzuAcm4A= #https://ci.appveyor.com/tools/encrypt
   mail_pass:
     secure: Y8FIfF5Dh0Ws9+Fr+jRj0HW/grhsJgr7kWkX7YBwyR8= #https://ci.appveyor.com/tools/encrypt
   mail_server: smtp.gmail.com
