@@ -43,6 +43,9 @@ It’s a modern breed of a client on the gaming scene – with an intuitive user
 * Open-source and Free
 * Cross platform: runs on Windows, macOS and Linux
 * Full compatibility: run same scripts on any of the above]]></description>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>
     <releaseNotes><![CDATA[* [Changelog](https://github.com/Mudlet/Mudlet/releases)
 * [News](https://www.mudlet.org/news/)]]></releaseNotes>
   </metadata>
