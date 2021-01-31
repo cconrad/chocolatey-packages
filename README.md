@@ -1,9 +1,10 @@
 [![](https://ci.appveyor.com/api/projects/status/github/cconrad/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/cconrad/chocolatey-packages)
+
 [Update status](https://gist.github.com/cconrad/63ca004acc5d6448b0cb7e4af3f81fb0)
-[![](http://transparent-favicon.info/favicon.ico)](#)
+
 [chocolatey/claus](https://chocolatey.org/profiles/claus)
 
-This repository contains [Chocolatey](https://chocolatey.org/) manual and [automatic packages](https://docs.chocolatey.org/en-us/create/automatic-packages).
+This repository contains manual and [automatic packages](https://docs.chocolatey.org/en-us/create/automatic-packages) for [Chocolatey](https://chocolatey.org/) .
 
 The repository is setup so that you can manage your packages entirely from the GitHub web interface (using AppVeyor to update and push packages) and/or using the local repository copy.
 
@@ -11,7 +12,7 @@ The repository is setup so that you can manage your packages entirely from the G
 
 To run locally you will need:
 
-- Powershell 5+.
+- Powershell 7+.
 - [Chocolatey Automatic Package Updater Module](https://github.com/majkinetor/au): `Install-Module au` or `cinst au`.
 
 In order to setup AppVeyor update runner please take a look at the AU wiki [AppVeyor section](https://github.com/majkinetor/au/wiki/AppVeyor).
