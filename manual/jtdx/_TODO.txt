@@ -1,5 +1,9 @@
 ﻿TODO
 
+Own:
+1. Contribute fix to https://github.com/chtof/chocolatey-packages/blob/master/automatic/jtdx/update.ps1
+
+
 1. Determine Package Use: 
 
  Organization? Internal Use? - You are not subject to distribution 
