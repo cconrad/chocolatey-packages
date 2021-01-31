@@ -5,7 +5,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>mudlet</id>
     <version>4.10.1.20210103</version>
-    <packageSourceUrl>https://github.com/cconrad/chocolatey-packages/tree/master/manual/mudlet</packageSourceUrl>
+    <packageSourceUrl>https://github.com/cconrad/chocolatey-packages/tree/master/automatic/mudlet</packageSourceUrl>
     <owners>claus</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Mudlet</title>
