@@ -1,18 +1,5 @@
 ﻿TODO
 
-
-
-Own:
-1. Download self-extracting EXE (find URL on http://www.dxlabsuite.com/download.htm#Installing%20or%20Upgrading%20the%20DXLab%20Launcher)
-2. Depend on 7Z
-3. Extract the EXE
-# See http://www.devx.com/vb2themax/Tip/18585
-4. Run DXLabLauncherSetup.exe /s some_local_file.log
-
-
-
-
-
 1. Determine Package Use: 
 
  Organization? Internal Use? - You are not subject to distribution 

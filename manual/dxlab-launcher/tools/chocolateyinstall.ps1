@@ -1,37 +1,30 @@
-﻿# IMPORTANT: Before releasing this package, copy/paste the next 2 lines into PowerShell to remove all comments from this file:
-#   $f='c:\path\to\thisFile.ps1'
-#   gc $f | ? {$_ -notmatch "^\s*#"} | % {$_ -replace '(^.*?)\s*?[^``]#.*','$1'} | Out-File $f+".~" -en utf8; mv -fo $f+".~" $f
+﻿$ErrorActionPreference = 'Stop';
 
-# 1. See the _TODO.md that is generated top level and read through that
-# 2. Follow the documentation below to learn how to create a package for the package type you are creating.
-# 3. In Chocolatey scripts, ALWAYS use absolute paths - $toolsDir gets you to the package's tools directory.
-$ErrorActionPreference = 'Stop'; # stop on all errors
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-# Internal packages (organizations) or software that has redistribution rights (community repo)
-# - Use `Install-ChocolateyInstallPackage` instead of `Install-ChocolateyPackage`
-#   and put the binaries directly into the tools folder (we call it embedding)
-#$fileLocation = Join-Path $toolsDir 'NAME_OF_EMBEDDED_INSTALLER_FILE'
-# If embedding binaries increase total nupkg size to over 1GB, use share location or download from urls
-#$fileLocation = '\\SHARE_LOCATION\to\INSTALLER_FILE'
-# Community Repo: Use official urls for non-redist binaries or redist where total package size is over 200MB
-# Internal/Organization: Download from internal location (internet sources are unreliable)
+
+# Download self-extracting EXE (find URL on http://www.dxlabsuite.com/download.htm#Installing%20or%20Upgrading%20the%20DXLab%20Launcher)
+$mainInstaller = 'http://www.dxlabsuite.com/' + ((Invoke-WebRequest 'http://www.dxlabsuite.com/download.htm#Installing%20or%20Upgrading%20the%20DXLab%20Launcher').Links | ? href -match 'DXLabLauncher.*Archive\.exe' | select -First 1 -expand href)
+
+# Unpack
+# TODO
+
+# See http://www.devx.com/vb2themax/Tip/18585
+# TODO Run DXLabLauncherSetup.exe /s some_local_file.log
+ 
+
+
 $url        = '' # download url, HTTPS preferred
 $url64      = '' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
-  fileType      = 'EXE_MSI_OR_MSU' #only one of these: exe, msi, msu
+  fileType      = 'EXE'
   url           = $url
   url64bit      = $url64
-  #file         = $fileLocation
 
-  softwareName  = 'dxlab-launcher*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
+  softwareName  = 'DXLabLauncher' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
 
-  # Checksums are now required as of 0.10.0.
-  # To determine checksums, you can get that from the original site if provided. 
-  # You can also use checksum.exe (choco install checksum) and use it 
-  # e.g. checksum -t sha256 -f path\to\file
   checksum      = ''
   checksumType  = 'sha256' #default is md5, can also be sha1, sha256 or sha512
   checksum64    = ''
@@ -74,21 +67,12 @@ Install-ChocolateyPackage @packageArgs # https://chocolatey.org/docs/helpers-ins
 ## Download and unpack a zip file - https://chocolatey.org/docs/helpers-install-chocolatey-zip-package
 ##Install-ChocolateyZipPackage $packageName $url $toolsDir [$url64 -checksum $checksum -checksumType $checksumType -checksum64 $checksum64 -checksumType64 $checksumType64]
 
-## Install Visual Studio Package - https://chocolatey.org/docs/helpers-install-chocolatey-vsix-package
-#Install-ChocolateyVsixPackage $packageName $url [$vsVersion] [-checksum $checksum -checksumType $checksumType]
-#Install-ChocolateyVsixPackage @packageArgs
-
 ## see the full list at https://chocolatey.org/docs/helpers-reference
 
 ## downloader that the main helpers use to download items
 ## if removing $url64, please remove from here
 ## - https://chocolatey.org/docs/helpers-get-chocolatey-web-file
-#Get-ChocolateyWebFile $packageName 'DOWNLOAD_TO_FILE_FULL_PATH' $url $url64
-
-## Installer, will assert administrative rights - used by Install-ChocolateyPackage
-## use this for embedding installers in the package when not going to community feed or when you have distribution rights
-## - https://chocolatey.org/docs/helpers-install-chocolatey-install-package
-#Install-ChocolateyInstallPackage $packageName $fileType $silentArgs '_FULLFILEPATH_' -validExitCodes $validExitCodes
+#Get-ChocolateyWebFile $packageName 'DOWNLOAD_TO_FILE_FULL_PATH' $url
 
 ## Unzips a file to the specified location - auto overwrites existing content
 ## - https://chocolatey.org/docs/helpers-get-chocolatey-unzip
