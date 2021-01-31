@@ -1,15 +1,9 @@
-# AU template: https://github.com/majkinetor/au-packages-template
-
 version: '{build}'
 max_jobs: 1
-image: WMF 5
-# History plugin requires complete log
-#clone_depth: 5
+image: Visual Studio 2019
 branches:
   only:
   - master
-#build:
-#  verbosity: minimal
 
 environment:
   # Set au version to use or omit to use the latest. Specify branch name to use development version from Github
@@ -23,7 +17,6 @@ environment:
   github_api_key:
     secure: 1rDePuiNnIj9wENKH/WhivO1JBJG+4+3da87nQlWzj2YBF7tO/zAdPrYO3kVGv1V #https://ci.appveyor.com/tools/encrypt
 
-
   # Mail credentials - for error notifications
   mail_user:
     secure: AIF4gU9KBnT8aK9WM3bjS6LvklVsxgJbzCdLzuAcm4A= #https://ci.appveyor.com/tools/encrypt
@@ -35,7 +28,7 @@ environment:
 
   # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
   # Optional, leave empty to create anonymous gist
-  gist_id:
+  gist_id: 63ca004acc5d6448b0cb7e4af3f81fb0
 
   # Force test: gist id for test results
   gist_id_test:
@@ -50,21 +43,21 @@ init:
 - git config --global core.safecrlf false
 
 install:
-- ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
-- ps: $PSVersionTable
+- pwsh: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
+- pwsh: $PSVersionTable
 - git --version
-- ps: |
+- pwsh: |
     git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
     . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
 
-- ps: |
+- pwsh: |
     "Build info"
     '  {0,-20} {1}' -f 'SCHEDULED BUILD:', ($Env:APPVEYOR_SCHEDULED_BUILD -eq 'true')
     '  {0,-20} {1}' -f 'FORCED BUILD:'   , ($Env:APPVEYOR_FORCED_BUILD    -eq 'true')
     '  {0,-20} {1}' -f 'RE BUILD:'       , ($Env:APPVEYOR_RE_BUILD        -eq 'true')
 
 build_script:
-- ps: |
+- pwsh: |
     $ErrorActionPreference = 'Continue'
 
     if ($Env:APPVEYOR_PROJECT_NAME  -like '*test*') { ./test_all.ps1 "random $Env:au_test_groups"; return }
