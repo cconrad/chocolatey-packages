@@ -6,7 +6,7 @@ function global:au_GetLatest {
     $re  = '.exe'
     $url = $download_page.Links | ? href -match $re | select -First 1 -expand href
 
-    $version = $url | Select-String -Pattern '[0-9]+\.[0-9]+\.[0-9]+'
+    $version = ($url | Select-String -Pattern '[0-9]+\.[0-9]+\.[0-9]+').Matches[0].ToString()
 
     return @{
         URL32        = $url
