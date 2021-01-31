@@ -1,4 +1,6 @@
-﻿## About
+﻿
+
+## About
 
 Mudlet is a quality [MUD](https://en.wikipedia.org/wiki/MUD) client, designed to take mudding to a new level.
 
