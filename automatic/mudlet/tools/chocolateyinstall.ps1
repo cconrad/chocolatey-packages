@@ -1,13 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://www.mudlet.org/download/Mudlet-4.10.1-windows-installer.exe'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
   fileType      = 'EXE'
-  url           = $url
+  url           = 'https://www.mudlet.org/download/Mudlet-4.10.1-windows-installer.exe'
 
   softwareName  = 'Mudlet*'
 
