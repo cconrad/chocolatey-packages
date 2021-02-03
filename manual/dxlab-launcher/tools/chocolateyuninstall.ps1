@@ -1,6 +1,4 @@
-﻿# IMPORTANT: Before releasing this package, copy/paste the next 2 lines into PowerShell to remove all comments from this file:
-#   $f='c:\path\to\thisFile.ps1'
-#   gc $f | ? {$_ -notmatch "^\s*#"} | % {$_ -replace '(^.*?)\s*?[^``]#.*','$1'} | Out-File $f+".~" -en utf8; mv -fo $f+".~" $f
+﻿Get-UninstallRegistryKey 'DXLabLauncher'
 
 ## NOTE: In 80-90% of the cases (95% with licensed versions due to Package Synchronizer and other enhancements),
 ## AutoUninstaller should be able to detect and handle registry uninstalls without a chocolateyUninstall.ps1.
@@ -15,7 +13,7 @@ $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   softwareName  = 'DXLabLauncher'  #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
   fileType      = 'EXE' #only one of these: MSI or EXE (ignore MSU for now)
-  silentArgs   = '/S C:\test\uninstall.log'
+  silentArgs   = '/S C:\DXLab\uninstal.log'
   validExitCodes= @(0) #please insert other valid exit codes here
 }
 
