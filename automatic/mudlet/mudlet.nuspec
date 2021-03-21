@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>mudlet</id>
-    <version>4.11.1</version>
+    <version>4.11.2</version>
     <packageSourceUrl>https://github.com/cconrad/chocolatey-packages/tree/master/automatic/mudlet</packageSourceUrl>
     <owners>claus</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
