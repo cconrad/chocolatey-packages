@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>scrivener</id>
+    <version>1.9.17</version>
+    <packageSourceUrl>https://github.com/cconrad/chocolatey-packages/tree/master/manual/scrivener</packageSourceUrl>
+    <owners>claus</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Scrivener</title>
+    <authors>
+      <![CDATA[Literature & Latte Ltd.]]>
+    </authors>
+    <projectUrl>https://www.literatureandlatte.com/scrivener/overview</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/cconrad/chocolatey-packages/icons/scrivener1.png</iconUrl>
+    <copyright>
+      <![CDATA[2020 Literature & Latte Ltd.]]>
+    </copyright>
+    <licenseUrl>http://www.literatureandlatte.com/downloads/Scrivener-EULA-Windows.pdf</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.literatureandlatte.com/learn-and-support</docsUrl>
+    <mailingListUrl>https://www.literatureandlatte.com/forum/viewforum.php?f=29</mailingListUrl>
+    <bugTrackerUrl>https://www.literatureandlatte.com/forum/viewforum.php?f=32</bugTrackerUrl>
+    <tags>scrivener trial</tags>
+    <summary>Scrivener is a word-processing program and outliner designed for authors.</summary>
+    <description>
+      <![CDATA[### For writing. And writing. And writing.
+Scrivener is the go-to app for writers of all kinds, used every day by best-selling novelists, screenwriters, non-fiction writers, students, academics, lawyers, journalists, translators and more. Scrivener won't tell you how to write—it simply provides everything you need to start writing and keep writing.
+    
+### Grow your manuscript your way
+Tailor-made for long writing projects, Scrivener banishes page fright by allowing you to compose your text in any order, in sections as large or small as you like. Got a great idea but don't know where it fits? Write when inspiration strikes and find its place later. Grow your manuscript organically, idea by idea.
+
+### See the forest or the trees
+Whether you plan or plunge, Scrivener works your way: hammer out every last detail before typing a word, or carve out a draft and restructure later. Or mix your methods and do a bit of both. In Scrivener, everything you write is integrated into an easy-to-use project outline. So working with an overview of your manuscript is only ever a click away, and turning Chapter Four into Chapter One is as simple as drag and drop.
+
+### Research within reach
+Need to refer to research? In Scrivener, your background material is always at hand, and you can open it right next to your work. Write a description based on a photograph. Transcribe an interview. Take notes about a PDF file or web page. Or check for consistency by referencing an earlier chapter alongside the one in progress.
+
+### Getting it out there
+Once you're ready to share your work with the world, compile everything into a single document for printing, self-publishing, or exporting to popular formats such as Word, PDF, Final Draft or plain text. You can even share using different formatting, so that you can write in your favorite font and still satisfy those submission guidelines.]]>
+    </description>
+    <releaseNotes>
+      <![CDATA[### Bug Fixes
+This update resolves a critical issue with our 3rd party Paddle software. Unfortunately, it again has to do with automatic re-activation preventing continued use of Scrivener. We sincerely apologise and hope this is the last we see of Paddle-specific issues within Scrivener.]]>
+    </releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+      <dependency id="netfx-4.6.2" version="4.6.2.20190930" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
