@@ -1,0 +1,29 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.187.0/containers/powershell
+{
+	"name": "PowerShell",
+	"dockerFile": "Dockerfile",
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.defaultProfile.linux": "pwsh"
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-vscode.powershell"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Install Chocolatey Automatic Package Updater Module
+	// https://github.com/majkinetor/au
+	"postCreateCommand": "sudo pwsh /workspaces/chocolatey-packages/setup/au_setup.ps1",
+
+	// Try to update automatic packages
+	"postStartCommand": "pwsh /workspaces/chocolatey-packages/update_all.ps1",
+	
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}
