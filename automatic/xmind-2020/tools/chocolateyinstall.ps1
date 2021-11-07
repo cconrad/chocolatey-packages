@@ -3,14 +3,14 @@
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'exe'
-  url           = 'https://dl3.xmind.net/XMind-for-Windows-32bit-11.0.2-202107132359.exe'
-  url64bit      = 'https://dl3.xmind.net/XMind-for-Windows-64bit-11.0.2-202107130605.exe'
+  url           = 'https://dl3.xmind.net/XMind-for-Windows-32bit-11.1.0-202109232316.exe'
+  url64bit      = 'https://dl3.xmind.net/XMind-for-Windows-64bit-11.1.1-202110191919.exe'
 
   softwareName  = 'XMind 10*'
 
-  checksum      = 'b413e376231f95ba20586185eedf7cb2cf7810246bae800b7f9c522363042a9d'
+  checksum      = '4d4f978fa13265accfedd0f34271c2e3188a6c8653c7be42184c615879849b3d'
   checksumType  = 'sha256'
-  checksum64    = 'bf12e68c04b7cc013e4a94dd60d383fe4b746d300be7bbc04e0921d394b2a32c'
+  checksum64    = '33eac4059b3c174d77b6abfd7a1ac457c425ad688e46bac48d6eed7901be5759'
   checksumType64= 'sha256'
 
   silentArgs   = '/allUsers /S'
