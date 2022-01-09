@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>scrivener</id>
-    <version>3.0.1</version>
+    <version>3.1.1</version>
     <packageSourceUrl>https://github.com/cconrad/chocolatey-packages/tree/master/manual/scrivener</packageSourceUrl>
     <owners>claus</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -38,55 +38,28 @@ Whether you plan or plunge, Scrivener works your way: hammer out every last deta
 Need to refer to research? In Scrivener, your background material is always at hand, and you can open it right next to your work. Write a description based on a photograph. Transcribe an interview. Take notes about a PDF file or web page. Or check for consistency by referencing an earlier chapter alongside the one in progress.
 
 ### Getting it out there
-Once you're ready to share your work with the world, compile everything into a single document for printing, self-publishing, or exporting to popular formats such as Word, PDF, Final Draft or plain text. You can even share using different formatting, so that you can write in your favorite font and still satisfy those submission guidelines.]]>
+Once you're ready to share your work with the world, compile everything into a single document for printing, self-publishing, or exporting to popular formats such as Word, PDF, Final Draft or plain text. You can even share using different formatting, so that you can write in your favorite font and still satisfy those submission guidelines.
+]]>
     </description>
     <releaseNotes>
       <![CDATA[### Refinements and Changes
-* The default "System Language" setting for Scrivener's interface now falls back on English if the system language currently has only a "Preview" translation available. These "Preview" translations (and any others available) can be set manually in the General tab of File ▸ Options... under the Language section. Thank you to the many volunteers who are continuing to provide translations of Scrivener's interface!
-* Preview interface translations for Asturian, Catalan, French, Korean, Portuguese, Slovenian, and Spanish (Spain and Mexico) have been updated. If you set Scrivener to use one of these languages, we would appreciate your feedback to help finalise the translations.
-* Upgrading Scrivener 1 projects now preserves additional compile settings and project metadata (now in Compile). Where relevant, these settings are also included when downgrading a Scrivener 3 project to the Scrivener 1 format.
-* "Linguistic Focus" (available from the Edit ▸ Writing Tools ▸ submenu) has been renamed to "Dialogue Focus" to better describe the feature.
-* The brightness of the locked editor and inspector header bars in Dark Mode has been reduced to improve icon visibility.
-* The Windows menu has been tidied for increased readability and now shows only the titles of open project windows, rather than the full file paths, and displays open Quick Reference panels in their own section.
-* The Whole Word project search operator now matches Mac behaviour, so that a multi-word search term is treated similarly to an Exact Phrase search but requires the opening and closing text to also be whole words.
-* Label tinting has been made consistent for default and custom document icons.
-* Spell check now uses the waves underline style by default for better visibility on high-resolution displays and when using the Dark Mode theme. (The underline stye can be set back to dots under Spelling in the Corrections tab of File ▸ Options....)
-* Dragging and dropping keywords from one project's Project Keywords panel to another's will now also preserve the colour.
+* Removed unintentional advertisements that appeared several places in the machine translations for Simplified Chinese and also made several user-provided corrections to the translations. Thank you!
+* Restored the Russian ru-yo and ru-ie dictionaries that were accidentally removed in 3.1.
+* Removed several English variants from the interface translation options, as they did not differ from the default US English.
 
-### Bugs Fixed
-#### Project Upgrading & Importing
-* Fixed a bug whereby snapshots were not included when importing a Scrivener project.
-* Fixed a bug that added all text in a Scrivener 1 project to the day's writing history when upgrading the project, which also then impacted the word count averages. Upgraded projects now start fresh with no word-count history recorded.
-* Fixed a bug whereby script elements might not be recognised after upgrading a Scrivener 1 project that used certain line spacing.
+### Bug Fixes
 
-#### Compile
-* Fixed a layout bug in PDF compile that could cause some lines of text not to appear in the compiled document.
-* Fixed a bug whereby the case setting for the Title element in a compile format's layout was not saved correctly, causing the title to revert to normal case when the format was reloaded. This affected some of the built-in compile formats as well, so that they were previously using a normal case for titles that should have been (and now will be) uppercase or small caps.
-* Fixed a bug whereby footnotes in HTML and ebook file formats always exported as plain-text. Italic and bold formatting is now preserved through compile.
-* Fixed a bug in Compile whereby page padding would be incorrectly added before text not following a page break and would not be added to the initial page when expected.
-* Fixed a bug whereby the default Title and Author metadata keys for MMD formats would be recreated in the compile settings if both were deleted.
-* Corrected the missing title element in the Part Title Page layout for the two Paperback compile formats.
-
-#### Editing
-* Fixed a compatibility bug whereby script elements might not be correctly identified when opening a Mac project on Windows.
-* Fixed a bug whereby rich-text comments and footnotes in imported documents would appear as regular inline text. These are now imported as inspector notes by default (and either can be set instead to import as formatted inline notation under the Sharing: Import tab of File ▸ Options...).
-* Fixed a bug that caused projects with custom formatting enabled in Project Settings to still use the global override font for inline footnotes if "Different inline footnotes font" was set in Options but not in the Project Settings. New inline footnotes in these projects will now properly maintain the font and font size of the preceding text.
-* Fixed a bug that caused the "Use inline footnotes font for inspector footnotes too" setting in the Editing options to have no effect on projects not using custom formatting.
-* Fixed a bug whereby closing a project without further edits after converting a PDF file or web page to text would fail to save the conversion, resulting in the PDF reverting to its original state and the imported webpage losing its content.
-* Fixed a bug whereby the Edit ▸ Move ▸ Left/Right commands might be incorrectly enabled or disabled after the paragraph formatting changed.
-* Fixed a bug whereby replacing a word with a synonym via the context menu's Related Words would insert the synonym into the existing text rather than replace it if the word was selected.
-
-#### UI
-* Fixed a bug that prevented some dictionary languages such as Korean from displaying as an available option after download if the downloaded files did not have an extension.
-* Fixed a bug whereby the Quick Search did not open via the menu when not visible on the main toolbar.
-* Fixed a bug whereby using the Previous/Next Document icon buttons in the editor header changed the binder selection (and opened the binder if hidden).
-* Refined the Save As Template... behaviour so that setting the category to Custom but leaving the name field empty will cause Scrivener to save the template into the Miscellaneous category rather than create an untitled category in the New Project window.
-* Fixed a bug preventing dragging and dropping labels from one project's Project Settings to another's.
-* Fixed a bug causing horizontal stripes to appear when auto-hiding the control panel in Composition mode while using Dark Mode.
-* Fixed a bug whereby the button to display the emoji menu when creating a new icon from text was not shown.
-* Renamed the previous "To Do" and "To Do Unchecked" custom binder icons to "Ticked" and "Unticked" and grouped them into a new "To Do" category, providing compatibility with Scrivener on macOS.
-* Updated the menu description for Format ▸ Color... in the keyboard shortcut options to correctly reflect the menu name.
-* Adjusted the alphabetisation of languages in the spell check dictionary list.]]>
+* Fixed a bug that allowed saving an unzipped backup over the original project, causing Scrivener to crash and both the project and backup to be lost.
+* Fixed a bug that caused a crash when checking spelling in a Scrivenings session without any misspellings.
+* Fixed a bug whereby using Save As in a project set to sync with an external folder retained the external folder file path in the new copy. An external folder should sync with only one project to avoid conflicts.
+* Fixed a bug whereby moving paragraphs in the editor via Edit ▸ Move ▸ Move Up/Move Down caused them to lose their paragraph formatting (alignment, indentation, etc.) and paragraph style, if one was set, and could also impact the formatting of adjacent paragraphs.
+* Fixed a bug whereby reloading a linked image from disk via the context menu did not update its dimensions.
+* Fixed a bug introduced in 3.1 that broke File ▸ Export for a multiple selection.
+* Fixed a bug whereby the spelling dialogue did not appear when checking spelling in a Scrivenings session if the initially focussed document did not contain any spelling errors.
+* Fixed a bug whereby text containing links to inspector comments or footnotes retained those links when pasted into a comment or footnote.
+* Fixed a bug introduced in 3.1 whereby copying text from within an inline notation and using Paste and Match Style pasted only an asterisk rather than the copied text.
+* Fixed a bug introduced in 3.1 whereby document templates were disabled in the Add Item submenu of the corkboard and outliner.
+]]>
     </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.1.0" />
