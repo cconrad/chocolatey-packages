@@ -5,7 +5,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>menutools</id>
     <version>1.0.2.20210222</version>
-    <packageSourceUrl>https://github.com/cconrad/chocolatey-packages/tree/master/manual/menutools</packageSourceUrl>
+    <packageSourceUrl>https://github.com/cconrad/chocolatey-packages/tree/master/automatic/menutools</packageSourceUrl>
     <owners>claus</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>MenuTools</title>
