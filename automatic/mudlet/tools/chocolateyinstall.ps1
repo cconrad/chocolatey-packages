@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'EXE'
-  url           = 'https://www.mudlet.org/download/Mudlet-4.15.0-windows-installer.exe'
+  url           = 'https://www.mudlet.org/download/Mudlet-4.15.1-windows-installer.exe'
 
-  checksum      = '368338b4e29479d24b77c7718f2d35b9d1886951a068aa01016f25a729d3e18a'
+  checksum      = 'd7bc18845f08e1c362eb12f3fb0fe5cd9c8c2f4712dcd0ca262098976de585ec'
   checksumType  = 'sha256'
 
   silentArgs    = '/silent'
