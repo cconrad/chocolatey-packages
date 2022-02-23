@@ -1,7 +1,3 @@
-[![](https://ci.appveyor.com/api/projects/status/github/cconrad/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/cconrad/chocolatey-packages)
-
-[Update status](https://gist.github.com/cconrad/63ca004acc5d6448b0cb7e4af3f81fb0)
-
 [chocolatey/claus](https://chocolatey.org/profiles/claus)
 
 This repository contains manual and [automatic packages](https://docs.chocolatey.org/en-us/create/automatic-packages) for [Chocolatey](https://chocolatey.org/) .
