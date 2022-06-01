@@ -4,23 +4,23 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>xmind-2020</id>
-    <version>11.1.2</version>
+    <version>12.0.2</version>
     <packageSourceUrl>https://github.com/cconrad/chocolatey-packages/tree/master/automatic/xmind-2020</packageSourceUrl>
     <owners>claus</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>XMind 2021</title>
+    <title>XMind (2022)</title>
     <authors>XMind Ltd.</authors>
-    <projectUrl>https://www.xmind.net/desktop/</projectUrl>
+    <projectUrl>https://www.xmind.net/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/cconrad/chocolatey-packages/icons/xmind-2020.png</iconUrl>
-    <copyright>2021 XMind Ltd.</copyright>
+    <copyright>2022 XMind Ltd.</copyright>
     <docsUrl>https://support.xmind.net/</docsUrl>
     <mailingListUrl>https://support.xmind.net/hc/en-us/community/topics</mailingListUrl>
     <tags>trial xmind mindmap</tags>
     <summary>Commercial mind mapping software</summary>
-    <description><![CDATA[XMind 2020, a full-featured mind mapping and brainstorming tool, designed to generate ideas, inspire creativity, brings efficiency both in work and life. Millions and millions of WFH people love it.
+    <description><![CDATA[XMind is a full-featured mind mapping and brainstorming app. Like a Swiss Army Knife for your brain, spark creativity and improve thinking skills. 100+ million installations on the planet. Support all platforms.
 
 ## Trial version
-XMind 2020 is commercial software (unlike [XMind 8](https://chocolatey.org/packages/xmind)). You need a subscription plan for personal and business use. Before purchase, you’re using a trial version. It's for evaluation purposes only. Some features are inactive and all exported images and PDFs come with watermarks.
+XMind (2022) is commercial software (unlike [XMind 8](https://chocolatey.org/packages/xmind)). You need a subscription plan for personal and business use. Before purchase, you’re using a trial version. It's for evaluation purposes only. Some features are inactive and all exported images and PDFs come with watermarks.
 
 ## Installation directory
 |                | 32-bit OS              | 64-bit OS                    |
