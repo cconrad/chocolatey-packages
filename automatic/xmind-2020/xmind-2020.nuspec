@@ -4,30 +4,33 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>xmind-2020</id>
-    <version>12.0.3</version>
+    <version>23.09.11172</version>
     <packageSourceUrl>https://github.com/cconrad/chocolatey-packages/tree/master/automatic/xmind-2020</packageSourceUrl>
     <owners>claus</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>XMind (2022)</title>
+    <title>XMind</title>
     <authors>XMind Ltd.</authors>
     <projectUrl>https://www.xmind.net/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/cconrad/chocolatey-packages/icons/xmind-2020.png</iconUrl>
-    <copyright>2022 XMind Ltd.</copyright>
+    <copyright>2023 XMind Ltd.</copyright>
     <docsUrl>https://support.xmind.net/</docsUrl>
     <mailingListUrl>https://support.xmind.net/hc/en-us/community/topics</mailingListUrl>
     <tags>trial xmind mindmap</tags>
     <summary>Commercial mind mapping software</summary>
     <description><![CDATA[XMind is a full-featured mind mapping and brainstorming app. Like a Swiss Army Knife for your brain, spark creativity and improve thinking skills. 100+ million installations on the planet. Support all platforms.
 
-## Trial version
-XMind (2022) is commercial software (unlike [XMind 8](https://chocolatey.org/packages/xmind)). You need a subscription plan for personal and business use. Before purchase, you’re using a trial version. It's for evaluation purposes only. Some features are inactive and all exported images and PDFs come with watermarks.
-
-## Installation directory
-|                | 32-bit OS              | 64-bit OS                    |
-| ---            | ---                    | ---                          |
-| 32-bit version | C:\Program Files\XMind | C:\Program Files (x86)\XMind |
-| 64-bit version | -                      | C:\Program Files\XMind       |
+XMind is commercial software (unlike [XMind 8](https://chocolatey.org/packages/xmind)). There is no time limit, but some features require a subscription.
 ]]></description>
+    <releaseNotes><![CDATA[
+1. Optimized the experience of undo/redo when editing the topic text;
+2. Fixed the issue where text might disappear when using some IMEs;
+3. Fixed the issue where the spelling suggestion did not work in special cases;
+4. Fixed the issue where the screenshot of Map Shot might get split;
+5. Fixed the issue where the Floating Topic could not use "Show Branch Only";
+6. Fixed the issue where some IMEs might cause errors in Outliner;
+7. Fixed the error that may occur when exporting PNG;
+8. Fixed some other known issues.
+]]></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
