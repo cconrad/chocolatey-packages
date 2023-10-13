@@ -17,6 +17,14 @@ To create a new package see [Creating the package updater script](https://github
 
 In a package directory run: `Test-Package`. This function can be used to start testing in [chocolatey-test-environment](https://github.com/majkinetor/chocolatey-test-environment) via `Vagrant` parameter or it can test packages locally.
 
+## Manual package update
+
+1. Download the latest version of the package from the official site.
+2. Update the package version in the `chocolateyinstall.ps1` file.
+3. Calculate the checksum and update it in the `chocolateyinstall.ps1` file.
+4. Update the `chocolateyinstall.ps1` file if needed.
+5. Update the version, copyright year and release notes in the `.nuspec` file.
+
 ## Automatic package update
 
 ### Single package
