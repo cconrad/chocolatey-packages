@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>xmind-2020</id>
-    <version>23.09.11172</version>
+    <version>24.4.10291.20240519</version>
     <packageSourceUrl>https://github.com/cconrad/chocolatey-packages/tree/master/automatic/xmind-2020</packageSourceUrl>
     <owners>claus</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -12,7 +12,7 @@
     <authors>XMind Ltd.</authors>
     <projectUrl>https://www.xmind.net/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/cconrad/chocolatey-packages/icons/xmind-2020.png</iconUrl>
-    <copyright>2023 XMind Ltd.</copyright>
+    <copyright>2024 XMind Ltd.</copyright>
     <docsUrl>https://support.xmind.net/</docsUrl>
     <mailingListUrl>https://support.xmind.net/hc/en-us/community/topics</mailingListUrl>
     <tags>trial xmind mindmap</tags>
