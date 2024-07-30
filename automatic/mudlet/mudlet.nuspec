@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>mudlet</id>
-    <version>4.17.2.20240519</version>
+    <version>4.18.5.20240728</version>
     <packageSourceUrl>https://github.com/cconrad/chocolatey-packages/tree/master/automatic/mudlet</packageSourceUrl>
     <owners>claus</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -12,7 +12,7 @@
     <authors>https://github.com/Mudlet/Mudlet/graphs/contributors</authors>
     <projectUrl>https://www.mudlet.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/cconrad/chocolatey-packages/icons/mudlet.png</iconUrl>
-    <copyright>2020 Mudlet.org community</copyright>
+    <copyright>2024 Mudlet.org community</copyright>
     <licenseUrl>https://github.com/Mudlet/Mudlet/blob/development/COPYING</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/Mudlet/Mudlet</projectSourceUrl>

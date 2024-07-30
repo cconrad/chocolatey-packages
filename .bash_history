@@ -1,0 +1,4 @@
+ll
+ls 
+pwd
+ls
