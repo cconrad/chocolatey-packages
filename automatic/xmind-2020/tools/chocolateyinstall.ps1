@@ -20,13 +20,21 @@ Install-ChocolateyPackage @packageArgs
 Copy-Item "$env:APPDATA\..\Local\Programs\Xmind" 'C:\Program Files\' -Recurse
 Remove-Item "$env:APPDATA\..\Local\Programs\Xmind" -Recurse
 
-# Move start menu shortcut
-Copy-Item "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Xmind.lnk" 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\'
-Remove-Item "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Xmind.lnk"
-
-# TODO Move desktop shortcut
+# Define paths
+$startMenuShortcutPath = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Xmind.lnk"
 $desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::Desktop)
+$desktopShortcutPath = "$desktopPath\Xmind.lnk"
+$publicDesktopPath = [System.Environment]::GetFolderPath('CommonDesktopDirectory')
 
+# TODO For each shortcut, set target path and start-in directory
+
+# Move start menu shortcut
+Copy-Item $startMenuShortcutPath 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\'
+Remove-Item $startMenuShortcutPath
+
+# Move desktop shortcut
+Copy-Item $desktopShortcutPath $publicDesktopPath
+Remove-Item "$desktopPath\Xmind.lnk"
 
 # TODO Define the path to the shortcut file
 $shortcutPath = "C:\path\to\your\shortcut.lnk"
