@@ -15,3 +15,41 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
+
+# Move application directory
+Copy-Item "$env:APPDATA\..\Local\Programs\Xmind" 'C:\Program Files\' -Recurse
+Remove-Item "$env:APPDATA\..\Local\Programs\Xmind" -Recurse
+
+# Move start menu shortcut
+Copy-Item "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Xmind.lnk" 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\'
+Remove-Item "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Xmind.lnk"
+
+# TODO Move desktop shortcut
+$desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::Desktop)
+
+
+# TODO Define the path to the shortcut file
+$shortcutPath = "C:\path\to\your\shortcut.lnk"
+
+# TODO Define the new target path
+$newTargetPath = "C:\new\path\to\target.exe"
+
+# TODO Define the "start in" directory
+$startInPath = "C:\start\in\directory"
+
+# TODO Create a COM object for WScript.Shell
+$shell = New-Object -ComObject WScript.Shell
+
+# TODO Create a shortcut object
+$shortcut = $shell.CreateShortcut($shortcutPath)
+
+# TODO Set the new target path
+$shortcut.TargetPath = $newTargetPath
+
+# TODO Set the "start in" directory
+$shortcut.WorkingDirectory = $startInPath
+
+# TODO Save the changes
+$shortcut.Save()
+
+# I modified the the shortcut properties, changing the target (and icon) to point to 'C:\Program Files\Xmind\Xmind.exe' and cleared the "Start in" field.
