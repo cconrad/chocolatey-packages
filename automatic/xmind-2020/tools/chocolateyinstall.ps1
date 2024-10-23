@@ -26,7 +26,14 @@ $desktopPath = [System.Environment]::GetFolderPath([System.Environment+SpecialFo
 $desktopShortcutPath = "$desktopPath\Xmind.lnk"
 $publicDesktopPath = [System.Environment]::GetFolderPath('CommonDesktopDirectory')
 
-# TODO For each shortcut, set target path and start-in directory
+# Modify shortcuts
+$shell = New-Object -ComObject WScript.Shell
+foreach ($shortcutPath in @($startMenuShortcutPath, $desktopShortcutPath)) {
+    $shortcut = $shell.CreateShortcut($shortcutPath)
+    $shortcut.TargetPath = 'C:\Program Files\Xmind\Xmind.exe'
+    $shortcut.WorkingDirectory = 'C:\Program Files\Xmind'
+    $shortcut.Save()
+}
 
 # Move start menu shortcut
 Copy-Item $startMenuShortcutPath 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\'
@@ -35,29 +42,3 @@ Remove-Item $startMenuShortcutPath
 # Move desktop shortcut
 Copy-Item $desktopShortcutPath $publicDesktopPath
 Remove-Item "$desktopPath\Xmind.lnk"
-
-# TODO Define the path to the shortcut file
-$shortcutPath = "C:\path\to\your\shortcut.lnk"
-
-# TODO Define the new target path
-$newTargetPath = "C:\new\path\to\target.exe"
-
-# TODO Define the "start in" directory
-$startInPath = "C:\start\in\directory"
-
-# TODO Create a COM object for WScript.Shell
-$shell = New-Object -ComObject WScript.Shell
-
-# TODO Create a shortcut object
-$shortcut = $shell.CreateShortcut($shortcutPath)
-
-# TODO Set the new target path
-$shortcut.TargetPath = $newTargetPath
-
-# TODO Set the "start in" directory
-$shortcut.WorkingDirectory = $startInPath
-
-# TODO Save the changes
-$shortcut.Save()
-
-# I modified the the shortcut properties, changing the target (and icon) to point to 'C:\Program Files\Xmind\Xmind.exe' and cleared the "Start in" field.
